@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-        nexusPolicyEvaluation iqStage: 'build', iqApplication: 'gitZipTest',
+        nexusPolicyEvaluation iqStage: 'build', iqApplication: 'gitZipTest2',
+            advancedProperties: 'dirExcludes=*.zip',
             failBuildOnNetworkError: true
             }
         }
